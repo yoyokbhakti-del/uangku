@@ -248,6 +248,7 @@ export default function DebtsReceivables() {
 
       {/* Form Dialogs */}
       <DebtFormDialog
+        key={`${tab}-${editingDebt?.id || "new"}`}
         open={showForm}
         onClose={() => { setShowForm(false); setEditingDebt(null); }}
         editing={editingDebt}
@@ -317,6 +318,17 @@ function DebtFormDialog({
           <DialogTitle>{editing ? `Edit ${type === "utang" ? "Utang" : "Piutang"}` : `${type === "utang" ? "Utang" : "Piutang"} Baru`}</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label>Jenis</Label>
+            <div className="flex gap-2">
+              <Button type="button" variant={type === "utang" ? "default" : "outline"} onClick={() => setType("utang")} className="flex-1 gap-1">
+                <CreditCard className="w-4 h-4" /> Utang
+              </Button>
+              <Button type="button" variant={type === "piutang" ? "default" : "outline"} onClick={() => setType("piutang")} className="flex-1 gap-1">
+                <HandCoins className="w-4 h-4" /> Piutang
+              </Button>
+            </div>
+          </div>
           <div className="space-y-2">
             <Label>Pihak</Label>
             <Input placeholder="Nama pihak" value={counterparty} onChange={(e) => setCounterparty(e.target.value)} required />
