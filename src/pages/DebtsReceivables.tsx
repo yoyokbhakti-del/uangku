@@ -360,7 +360,7 @@ function DebtFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Nilai (Rp)</Label>
-            <Input type="number" min="1" step="1000" placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value)} required />
+            <Input inputMode="numeric" placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))} />
           </div>
           <div className="space-y-2">
             <Label>Catatan</Label>
@@ -420,7 +420,7 @@ function DebtPaymentFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Nominal (Rp)</Label>
-            <Input type="number" min="1" step="1000" max={debt.remaining} placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value)} required />
+            <Input inputMode="numeric" placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))} />
           </div>
           <div className="space-y-2">
             <Label>Akun Bayar</Label>

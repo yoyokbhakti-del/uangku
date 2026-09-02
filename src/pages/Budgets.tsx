@@ -212,7 +212,7 @@ function BudgetFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Anggaran (Rp)</Label>
-            <Input type="number" min="1000" step="10000" placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value)} required />
+            <Input inputMode="numeric" placeholder="0" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))} />
           </div>
           <DialogFooter>
             <Button type="button" variant="outline" onClick={onClose}>Batal</Button>

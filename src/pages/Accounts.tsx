@@ -259,7 +259,7 @@ function AccountFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Saldo Awal (Rp)</Label>
-            <Input type="number" value={balance} onChange={(e) => setBalance(e.target.value)} />
+            <Input inputMode="numeric" value={balance} onChange={(e) => setBalance(e.target.value.replace(/[^0-9]/g, ""))} />
           </div>
           <div className="space-y-2">
             <Label>Warna</Label>

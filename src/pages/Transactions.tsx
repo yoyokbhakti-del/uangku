@@ -351,12 +351,10 @@ function TransactionFormDialog({
             <div className="space-y-2">
               <Label>Nominal (Rp)</Label>
               <Input
-                type="number"
-                min="1"
-                step="1000"
+                inputMode="numeric"
                 placeholder="0"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))}
                 required
               />
             </div>
