@@ -167,7 +167,7 @@ function CategoryFormDialog({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label>Nama Kategori</Label>
-            <Input placeholder="Contoh: Gaji" value={name} onChange={(e) => setName(e.target.value)} required />
+            <Input placeholder="Contoh: Gaji" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label>Tipe</Label>

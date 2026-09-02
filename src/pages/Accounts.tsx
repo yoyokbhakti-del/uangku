@@ -244,7 +244,7 @@ function AccountFormDialog({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label>Nama Akun</Label>
-            <Input placeholder="Contoh: Kas Tunai" value={name} onChange={(e) => setName(e.target.value)} required />
+            <Input placeholder="Contoh: Kas Tunai" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label>Tipe Akun</Label>

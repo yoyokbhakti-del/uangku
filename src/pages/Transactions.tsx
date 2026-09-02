@@ -292,7 +292,7 @@ function TransactionFormDialog({
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-2">
               <Label>Tanggal</Label>
-              <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+              <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label>Status</Label>
@@ -355,7 +355,7 @@ function TransactionFormDialog({
                 placeholder="0"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))}
-                required
+
               />
             </div>
             <div className="space-y-2">

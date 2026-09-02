@@ -331,7 +331,7 @@ function DebtFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Pihak</Label>
-            <Input placeholder="Nama pihak" value={counterparty} onChange={(e) => setCounterparty(e.target.value)} required />
+            <Input placeholder="Nama pihak" value={counterparty} onChange={(e) => setCounterparty(e.target.value)} />
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-2">
@@ -351,11 +351,11 @@ function DebtFormDialog({
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-2">
               <Label>Tanggal</Label>
-              <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+              <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label>Jatuh Tempo</Label>
-              <Input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} required />
+              <Input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
             </div>
           </div>
           <div className="space-y-2">
@@ -416,7 +416,7 @@ function DebtPaymentFormDialog({
           </div>
           <div className="space-y-2">
             <Label>Tanggal Bayar</Label>
-            <Input type="date" value={payDate} onChange={(e) => setPayDate(e.target.value)} required />
+            <Input type="date" value={payDate} onChange={(e) => setPayDate(e.target.value)} />
           </div>
           <div className="space-y-2">
             <Label>Nominal (Rp)</Label>
